@@ -58,20 +58,4 @@ public class CubuGenerator : MonoBehaviour
             this.span = this.offsetX + this.spaceX * n;
         }
     }
-
-    //void OncollisionEnter(Collision other)
-    //{
-    //    if (other.gameObject.tag == "ground" || other.gameObject.tag == "CubePrefab")
-    //    {
-    //        GetComponent<AudioSource>().Play();
-    //    }
-    //}
-
-    void OncollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "ground")
-        {
-             GetComponent<AudioSource>().Play();
-        }
-    }
 }

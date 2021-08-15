@@ -30,11 +30,18 @@ public class CubeController : MonoBehaviour
         }
     }
 
-    void OncollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "CubePrefab")
+        Debug.Log("OnCollisionEnter2D‚ªŒÄ‚Î‚ê‚Ä‚¢‚é‚©");
+        if(collision.gameObject.tag == "CubePrefabTag")
         {
-             GetComponent<AudioSource>().Play();
+            GetComponent<AudioSource>().Play();
+            Debug.Log("if•¶‚ªŒÄ‚Î‚ê‚Ä‚¢‚é‚©");
+        }
+        if (collision.gameObject.tag == "groundTag")
+        { 
+            GetComponent<AudioSource>().Play();
+            Debug.Log("a");
         }
     }
 }
